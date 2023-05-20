@@ -6,7 +6,7 @@ session_start();
 
 <head>
   <title>BODY BUILDING</title>
-  <link rel="stylesheet" href="../css//app.css">
+  <link rel="stylesheet" href="../css/app.css">
 </head>
 
 <body>
