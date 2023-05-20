@@ -6,7 +6,7 @@ session_start();
 
 <head>
   <title>BODY BUILDING</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../css/app.css">
 </head>
 
 <body>
@@ -15,8 +15,8 @@ session_start();
       <h1>BodyBuilding</h1>
       <ul>
         <li><a href="index.php">HOME</a></li>
-        <li><a href="discover.php">ABOUT</a></li>
-        <li><a href="blog.php">TRAINING</a></li>
+        <li><a href="about.php">ABOUT</a></li>
+        <li><a href="programs.php">TRAINING</a></li>
         <?php
         if (isset($_SESSION['userusername'])) {
           echo '<li><a href="profile.php">PROFILE</a></li>';
@@ -30,3 +30,8 @@ session_start();
     </div>
   </div>
   <div class="content">
+    @yield('content')
+  </div>
+</body>
+
+</html>

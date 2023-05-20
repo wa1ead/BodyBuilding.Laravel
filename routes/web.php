@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StaticController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [staticController::class, 'index']);
 
-Route::get('/login.php', function () {
-    return view('login');
-});
+Route::get('/programs.php', [staticController::class, 'programs']);
 
-Route::get('/signup.php', function () {
-    return view('signup');
-});
+Route::get('/about.php', [staticController::class, 'about']);
+
+Route::get('profile.php', [staticController::class, 'profile']);
+
+Route::get('/login.php', [staticController::class, 'login']);
+
+Route::get('/signup.php', [staticController::class, 'signup']);
