@@ -12,7 +12,7 @@ session_start();
 <body>
   <div class="banner">
     <div class="navbar">
-      <h1>BodyBuilding</h1>
+      <h1><a href="index.php">BodyBuilding</a></h1>
       <ul>
         <li><a href="index.php">HOME</a></li>
         <li><a href="about.php">ABOUT</a></li>
