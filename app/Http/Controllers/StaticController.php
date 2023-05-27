@@ -13,7 +13,7 @@ class StaticController extends Controller
 
     public function programs()
     {
-        return view('programs');
+        return view('programs.index');
     }
 
     public function about()

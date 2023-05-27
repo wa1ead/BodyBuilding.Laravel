@@ -6,6 +6,17 @@ use Illuminate\Http\Request;
 
 class ProgramsController extends Controller
 {
+  private static function getData()
+  {
+    return [
+      ['id' => 1, 'program' => 'pectoraux', 'training' => ' 4 séries de 12 répétitions – 1 minute 30 de repos'],
+      ['id' => 1, 'program' => 'dos', 'training' => '3 séries de 12 répétitions – 1 minute 30 de repos'],
+      ['id' => 1, 'program' => 'jambes', 'training' => ' 4 séries de 10 répétitions – 2 minutes de repos'],
+      ['id' => 1, 'program' => 'épaules', 'training' => ' 3 séries de 12 répétitions – 2 minutes de repos'],
+      ['id' => 1, 'program' => 'biceps', 'training' => ' 4 séries de 12 répétitions – 1 minute 30 de repos'],
+      ['id' => 1, 'program' => 'triceps', 'training' => '  4 séries de 10 répétitions – 1 minute de repos']
+    ];
+  }
   /**
    * Display a listing of the resource.
    */
