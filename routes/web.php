@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProgramsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StaticController;
 
@@ -25,3 +26,6 @@ Route::get('profile.php', [staticController::class, 'profile']);
 Route::get('/login.php', [staticController::class, 'login']);
 
 Route::get('/signup.php', [staticController::class, 'signup']);
+
+
+Route::resource('programs', ProgramsController::class);
