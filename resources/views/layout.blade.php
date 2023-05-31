@@ -16,7 +16,7 @@ session_start();
       <ul>
         <li><a href="index.php">HOME</a></li>
         <li><a href="about.php">ABOUT</a></li>
-        <li><a href="programs.php">TRAINING</a></li>
+        <li><a href="programs">TRAINING</a></li>
         <?php
         if (isset($_SESSION['userusername'])) {
           echo '<li><a href="profile.php">PROFILE</a></li>';
