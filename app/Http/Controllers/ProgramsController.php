@@ -9,12 +9,12 @@ class ProgramsController extends Controller
   private static function getData()
   {
     return [
-      ['id' => 1, 'program' => 'pectoraux', 'training' => ' 4 séries de 12 répétitions – 1 minute 30 de repos'],
-      ['id' => 2, 'program' => 'dos', 'training' => '3 séries de 12 répétitions – 1 minute 30 de repos'],
-      ['id' => 3, 'program' => 'jambes', 'training' => ' 4 séries de 10 répétitions – 2 minutes de repos'],
-      ['id' => 4, 'program' => 'épaules', 'training' => ' 3 séries de 12 répétitions – 2 minutes de repos'],
-      ['id' => 5, 'program' => 'biceps', 'training' => ' 4 séries de 12 répétitions – 1 minute 30 de repos'],
-      ['id' => 6, 'program' => 'triceps', 'training' => '  4 séries de 10 répétitions – 1 minute de repos'],
+      ['id' => 1, 'program' => 'pecs', 'training' => '4 sets of 12 repetitions – 1 minute 30 rest'],
+      ['id' => 2, 'program' => 'back', 'training' => '3 sets of 12 repetitions – 1 minute 30 rest'],
+      ['id' => 3, 'program' => 'legs', 'training' => '4 sets of 10 repetitions – 2 minutes rest'],
+      ['id' => 4, 'program' => 'shoulders', 'training' => '3 sets of 12 repetitions – 2 minutes rest'],
+      ['id' => 5, 'program' => 'biceps', 'training' => '4 sets of 12 repetitions – 1 minute 30 rest'],
+      ['id' => 6, 'program' => 'triceps', 'training' => '4 sets of 10 repetitions – 1 minute rest'],
     ];
   }
   /**
