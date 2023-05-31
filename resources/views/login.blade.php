@@ -1,21 +1,19 @@
 @extends('layout')
 @section('content')
 <div class="content">
-  <div class="container my-5">
-    <div class="mb-3">
-      <h2>Login</h2>
-      <form action="includes/login.inc.php" method="post">
-        <div class="mb-3">
-          <label>USERNAME OR EMAIL</label>
-          <input type="text" name="username" placeholder="Username/Email...">
-        </div>
-        <div class="mb-3">
-          <label>PASSWORD</label>
-          <input type="password" name="pwd" placeholder="Password...">
-        </div>
-        <button type="submit" name="submit">Login</button>
-      </form>
-    </div>
+  <div class="login-box">
+    <h2>Login</h2>
+    <form action="includes/login.inc.php" method="post">
+      <div class="mb-3">
+        <label>USERNAME OR EMAIL</label>
+        <input type="text" name="username" placeholder="Username/Email...">
+      </div>
+      <div class="mb-3">
+        <label>PASSWORD</label>
+        <input type="password" name="pwd" placeholder="Password...">
+      </div>
+      <button type="submit" name="submit">Login</button>
+    </form>
   </div>
 
   <?php

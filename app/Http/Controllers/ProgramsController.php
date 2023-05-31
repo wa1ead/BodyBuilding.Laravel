@@ -46,9 +46,18 @@ class ProgramsController extends Controller
   /**
    * Display the specified resource.
    */
-  public function show(string $id)
+  public function show($program)
   {
     $programs = self::getData();
+
+    $index = array_search($program, array_column($programs, 'id'));
+
+    if ($index === false) {
+      abort(404);
+    }
+    return view('programs.show', [
+      'program' => $programs[$index]
+    ]);
   }
 
   /**

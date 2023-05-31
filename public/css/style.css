@@ -57,10 +57,26 @@
     text-transform: uppercase;
 }
 
-/*.signup-box h2{
-  text-align: center;
-  padding-top: 15px;
+.navbar h1 a {
+    text-decoration: none;
+    color: skyblue;
 }
+
+.signup-box button {
+    text-align: center;
+    padding-top: 15px;
+    text-decoration: none;
+    color: skyblue;
+}
+
+.login-box button {
+    text-align: center;
+    padding-top: 15px;
+    text-decoration: none;
+    color: skyblue;
+}
+
+/*
 form{
   width: 300px;
   margin-left: 20px;
@@ -112,6 +128,7 @@ button {
 }
 button a {
     text-decoration: none;
+    color: skyblue;
 }
 span {
     background: #009688;
