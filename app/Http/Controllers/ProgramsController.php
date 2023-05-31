@@ -14,7 +14,7 @@ class ProgramsController extends Controller
       ['id' => 3, 'program' => 'jambes', 'training' => ' 4 séries de 10 répétitions – 2 minutes de repos'],
       ['id' => 4, 'program' => 'épaules', 'training' => ' 3 séries de 12 répétitions – 2 minutes de repos'],
       ['id' => 5, 'program' => 'biceps', 'training' => ' 4 séries de 12 répétitions – 1 minute 30 de repos'],
-      ['id' => 6, 'program' => 'triceps', 'training' => '  4 séries de 10 répétitions – 1 minute de repos']
+      ['id' => 6, 'program' => 'triceps', 'training' => '  4 séries de 10 répétitions – 1 minute de repos'],
     ];
   }
   /**
@@ -22,7 +22,9 @@ class ProgramsController extends Controller
    */
   public function index()
   {
-    return view('programs.index');
+    return view('programs.index', [
+      'programs' => self::getData()
+    ]);
   }
 
   /**
@@ -46,7 +48,7 @@ class ProgramsController extends Controller
    */
   public function show(string $id)
   {
-    //
+    $programs = self::getData();
   }
 
   /**
