@@ -3,7 +3,7 @@
 
 <div class="content">
   <div class='programs'>
-    <h1>PROGRAMS</h1>
+    <h3>PROGRAMS</h3>
   </div>
   @foreach ($programs as $program)
   <a href="{{route('programs.show', ['program' => $program['id']]) }}">
