@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProgramsController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StaticController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,17 +15,29 @@ use App\Http\Controllers\StaticController;
 |
 */
 
-Route::get('/', [staticController::class, 'index']);
+Route::get('/', function () {
+    return view('index');
+});
 
-Route::get('/programs.php', [staticController::class, 'programs']);
-
-Route::get('/about.php', [staticController::class, 'about']);
-
-Route::get('profile.php', [staticController::class, 'profile']);
-
-Route::get('/login.php', [staticController::class, 'login']);
-
-Route::get('/signup.php', [staticController::class, 'signup']);
+Route::get('/login', function () {
+    return view('auth/login');
+});
 
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
 Route::resource('programs', ProgramsController::class);
+
+
+require __DIR__ . '/auth.php';
