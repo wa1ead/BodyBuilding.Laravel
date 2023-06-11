@@ -70,17 +70,31 @@ class ProgramsController extends Controller
   /**
    * Show the form for editing the specified resource.
    */
-  public function edit(string $id)
+  public function edit($program)
   {
-    //
+    return view('programs.edit', [
+      'program' => Program::findOrFail($program)
+    ]);
   }
 
   /**
    * Update the specified resource in storage.
    */
-  public function update(Request $request, string $id)
+  public function update(Request $request, $program)
   {
-    //
+    $request->validate([
+      'program-name' => 'required',
+      'program-training' => 'required'
+    ]);
+
+    $to_update = Program::findOrFail($program);
+
+    $to_update->name = strip_tags($request->input('program-name'));
+    $to_update->training = strip_tags($request->input('program-training'));
+
+    $to_update->save();
+
+    return redirect()->route('programs.show', $program);
   }
 
   /**
