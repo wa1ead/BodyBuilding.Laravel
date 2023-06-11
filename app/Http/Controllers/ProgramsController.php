@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Program;
 
 class ProgramsController extends Controller
 {
@@ -23,7 +24,7 @@ class ProgramsController extends Controller
   public function index()
   {
     return view('programs.index', [
-      'programs' => self::getData()
+      'programs' => Program::all()
     ]);
   }
 
@@ -40,7 +41,14 @@ class ProgramsController extends Controller
    */
   public function store(Request $request)
   {
-    //
+    $program = new Program();
+
+    $program->name = $request->input('program-name');
+    $program->training = $request->input('program-training');
+
+    $program->save();
+
+    return redirect()->route('programs.index');
   }
 
   /**
@@ -48,15 +56,8 @@ class ProgramsController extends Controller
    */
   public function show($program)
   {
-    $programs = self::getData();
-
-    $index = array_search($program, array_column($programs, 'id'));
-
-    if ($index === false) {
-      abort(404);
-    }
     return view('programs.show', [
-      'program' => $programs[$index]
+      'program' => Program::findOrFail($program)
     ]);
   }
 

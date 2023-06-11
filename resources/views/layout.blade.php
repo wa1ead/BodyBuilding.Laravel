@@ -17,6 +17,7 @@ session_start();
         <li><a href="index.php">HOME</a></li>
         <li><a href="about.php">ABOUT</a></li>
         <li><a href="programs">TRAINING</a></li>
+        <li><a href={{route('programs.create')}}>CREATE</a></li>
         <?php
         if (isset($_SESSION['userusername'])) {
           echo '<li><a href="profile.php">PROFILE</a></li>';

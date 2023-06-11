@@ -8,7 +8,8 @@
   </div>
 
   <div class="flex justify-center">
-    <form action="" method="post" class="form bg-white p-6 border-1">
+    <form action="{{route('programs.store')}}" method="post" >
+      @csrf 
       <div>
         <label for="program-name">Program</label>
         <input id="program-name" name="program-name" type="text" >
