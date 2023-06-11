@@ -41,10 +41,16 @@ class ProgramsController extends Controller
    */
   public function store(Request $request)
   {
+
+    $request->validate([
+      'program-name' => 'required',
+      'program-training' => 'required'
+    ]);
+
     $program = new Program();
 
-    $program->name = $request->input('program-name');
-    $program->training = $request->input('program-training');
+    $program->name = strip_tags($request->input('program-name'));
+    $program->training = strip_tags($request->input('program-training'));
 
     $program->save();
 

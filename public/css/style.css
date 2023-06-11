@@ -147,3 +147,9 @@ button:hover span {
 button:hover {
     border: none;
 }
+
+.form-error {
+    margin: 0;
+    font-size: 0.9rem;
+    color: red;
+}
