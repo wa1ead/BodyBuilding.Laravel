@@ -15,17 +15,16 @@ use App\Http\Controllers\StaticController;
 |
 */
 
-Route::get('/', [staticController::class, 'index']);
+Route::get('/', [staticController::class, 'index'])->name('home.index');
 
-Route::get('/programs.php', [staticController::class, 'programs']);
+Route::get('/about', [staticController::class, 'about'])->name('home.about');
 
-Route::get('/about.php', [staticController::class, 'about']);
+Route::get('/programs', [staticController::class, 'programs'])->name('home.programs');
 
-Route::get('profile.php', [staticController::class, 'profile']);
+Route::get('/login', [staticController::class, 'login'])->name('home.login');
 
-Route::get('/login.php', [staticController::class, 'login']);
+Route::get('/signup', [staticController::class, 'signup'])->name('home.signup');
 
-Route::get('/signup.php', [staticController::class, 'signup']);
-
+Route::get('profile', [staticController::class, 'profile'])->name('home.profile');
 
 Route::resource('programs', ProgramsController::class);
