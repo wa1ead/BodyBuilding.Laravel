@@ -100,8 +100,11 @@ class ProgramsController extends Controller
   /**
    * Remove the specified resource from storage.
    */
-  public function destroy(string $id)
+  public function destroy($program)
   {
-    //
+    $to_delete = Program::findOrFail($program);
+    $to_delete->delete();
+
+    return redirect()->route('programs.index', $program);
   }
 }

@@ -159,3 +159,8 @@ button:hover {
     font-size: 1rem;
     color: skyblue;
 }
+.delete-btn {
+    text-decoration: underline;
+    font-size: 1rem;
+    color: palevioletred;
+}
