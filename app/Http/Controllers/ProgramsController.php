@@ -9,14 +9,6 @@ class ProgramsController extends Controller
 {
   private static function getData()
   {
-    return [
-      ['id' => 1, 'program' => 'pecs', 'training' => '4 sets of 12 repetitions – 1 minute 30 rest'],
-      ['id' => 2, 'program' => 'back', 'training' => '3 sets of 12 repetitions – 1 minute 30 rest'],
-      ['id' => 3, 'program' => 'legs', 'training' => '4 sets of 10 repetitions – 2 minutes rest'],
-      ['id' => 4, 'program' => 'shoulders', 'training' => '3 sets of 12 repetitions – 2 minutes rest'],
-      ['id' => 5, 'program' => 'biceps', 'training' => '4 sets of 12 repetitions – 1 minute 30 rest'],
-      ['id' => 6, 'program' => 'triceps', 'training' => '4 sets of 10 repetitions – 1 minute rest'],
-    ];
   }
   /**
    * Display a listing of the resource.
@@ -63,7 +55,8 @@ class ProgramsController extends Controller
   public function show($program)
   {
     return view('programs.show', [
-      'program' => Program::findOrFail($program)
+      'program' => Program::findOrFail($program),
+      'training' => Program::findOrFail($program)
     ]);
   }
 

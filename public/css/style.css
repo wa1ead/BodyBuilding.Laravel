@@ -103,6 +103,7 @@ form {
 form label {
     display: flex;
     margin-top: 20px;
+    margin-bottom: 10px;
     font-size: 18px;
 }
 form input {
