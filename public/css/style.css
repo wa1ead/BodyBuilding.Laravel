@@ -85,6 +85,22 @@
     color: white;
 }
 
+.content a {
+    color: skyblue;
+    text-decoration: none;
+    display: block;
+}
+
+.content a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.content a:visited {
+    color: skyblue;
+    text-decoration: none;
+}
+
 .content h1 {
     font-size: 70px;
     margin-top: 80px;
@@ -94,6 +110,10 @@
     margin: 20px auto;
     font-weight: 100;
     line-height: 25px;
+}
+
+.programs h2 {
+    margin: auto;
 }
 
 form {
